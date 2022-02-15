@@ -179,7 +179,7 @@ pub enum Phase {
 ///
 /// [`WrapperKeepOpaque`] stores the type only in its opaque format, aka as a `Vec<u8>`. To
 /// access the real type `T` [`Self::try_decode`] needs to be used.
-#[derive(Derivative, Encode, Decode)]
+#[derive(Derivative, Encode, Decode, scale_info::TypeInfo)]
 #[derivative(
     Debug(bound = ""),
     Clone(bound = ""),
